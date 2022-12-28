@@ -200,7 +200,7 @@ var greatestDecreaseMonth = '';
 for (var i = 0; i < finances.length; i++) {
 
   if (i > 0) {
-    var change = finances[i][1] - finances[i-1][1];
+    var change = finances[i][1] - finances[i - 1][1];
 
     if (change < greatestDecrease) {
       greatestDecrease = change;
