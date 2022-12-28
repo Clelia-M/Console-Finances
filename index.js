@@ -105,7 +105,7 @@ var totalMonths = 0;
 //Each element in the array is itself an array, with the first element being the month and the second element being the financial data for that month
 //Step 3: Increment the total number of months by 1 for each month in the dataset
 
-for(var i=0; i< finances.length;i++) {
+for(var i=0; i< finances.length; i++) {
   var month = finances[i][0];
   var data = finances[i][1];
   totalMonths++;
@@ -119,25 +119,22 @@ console.log("Total Months: " + totalMonths)
 // var monthCount = finances.length;
 // console.log("Total Months: " + monthCount);
 
-// The net total amount of Profit/Losses over the entire period.
-// add everything together
-// probably a loop
+//The net total amount of Profit/Losses over the entire period.
+//Step 1: Create a variable to store the total amount of Profit/Losses
 
-console.log(finances[0][1]);
+var totalProfitLoss = 0;
 
+//Step 2: Loop through the elements in the finances array
+//Step 3: Add the financial data for the current month to the total Profit/Losses
 
-// var total = 0;
-// for (var i = 0; 1 < finances.length; i += i) {
-//  total += finances[0][1];
-//  console.log("Total: " + total);
-// }
+for(var i=0; i< finances.length; i++) {
+  var month = finances[i][0];
+  var data = finances[i][1];
+  totalProfitLoss += data;
+}
 
-// var newFinances = finances.length[2];
-// var secondelement = newFinances[1];
-
-//console.log(newFinances);
-//console.log(secondelement);
-
+//The net total amount of Profit/Losses:
+console.log("Total: " + "$"+totalProfitLoss);
 
 // The average of the changes in Profit/Losses over the entire period.
 // calculate each change by subtracting previous month from this month  i+1 - i
