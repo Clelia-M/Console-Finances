@@ -88,7 +88,7 @@ var finances = [
 ];
 
 
-// Greatest Increase in Profits: Feb-2012 ($1926159)
+
 // Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
 //Financial Analysis
@@ -104,7 +104,7 @@ var totalMonths = 0;
 //Each element in the array is itself an array, with the first element being the month and the second element being the financial data for that month
 //Step 3: Increment the total number of months by 1 for each month in the dataset
 
-for(var i=0; i<finances.length; i++) {
+for (var i = 0; i < finances.length; i++) {
   var month = finances[i][0];
   var data = finances[i][1];
   totalMonths++;
@@ -127,7 +127,7 @@ var totalProfitLoss = 0;
 //Step 2: Loop through the elements in the finances array
 //Step 3: Add the financial data for the current month to the total Profit/Losses
 
-for(var i=0; i<finances.length; i++) {
+for (var i = 0; i < finances.length; i++) {
   totalProfitLoss += finances[i][1];
 }
 
@@ -147,21 +147,46 @@ var numMonths = 0;
 //Step 4: Calculate the average change in profits by dividing the total change by the number of months
 //This code is based on the assumption that the dataset is in chronological order (as it is in this challenge)
 
-for(var i=0; i<finances.length; i++) {
+for (var i = 0; i < finances.length; i++) {
 
-  if (i>0) {
-    totalChange += finances[i][1] - finances[i-1][1];
+  if (i > 0) {
+    totalChange += finances[i][1] - finances[i - 1][1];
+
   }
 
   numMonths++;
 }
 
-var avgChange = totalChange/numMonths;
+var avgChange = totalChange / numMonths;
 
 // Average  Change:
 console.log("Average Change: $" + avgChange);
 
 // The greatest increase in profits (date and amount) over the entire period.
+//Step 1: Create a variable to store the greatest increase in profits and the correspongin month
 
+var greatestIncrease = 0;
+var greatestIncreaseMonth = '';
+
+//Step 2: Loop through the elements in the finances array
+//Step 3: Calculate the change in profits from the previous month
+//Step 4: Check if the change in profits is grater than the current greatest increase
+//Step 5: Update the greatest increase and the relative month
+
+for (var i = 0; i < finances.length; i++) {
+
+  if (i > 0) {
+    var change = finances[i][1] - finances[i - 1][1];
+
+    if (change > greatestIncrease) {
+      greatestIncrease = change;
+      greatestIncreaseMonth = finances[i][0];
+
+    }
+  }
+}
+
+//Greatest Increase in Profits:
+console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " ($" + greatestIncrease + ")")
 
 // The greatest decrease in losses (date and amount) over the entire period.
