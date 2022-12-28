@@ -88,9 +88,6 @@ var finances = [
 ];
 
 
-
-// Greatest Decrease in Profits: Sep-2013 ($-2196167)
-
 //Financial Analysis
 //----------------------------
 console.log("Financial Analysis \n----------------------------");
@@ -163,7 +160,7 @@ var avgChange = totalChange / numMonths;
 console.log("Average Change: $" + avgChange);
 
 // The greatest increase in profits (date and amount) over the entire period.
-//Step 1: Create a variable to store the greatest increase in profits and the correspongin month
+//Step 1: Create a variable to store the greatest increase in profits and the corresponding month
 
 var greatestIncrease = 0;
 var greatestIncreaseMonth = '';
@@ -190,3 +187,28 @@ for (var i = 0; i < finances.length; i++) {
 console.log("Greatest Increase in Profits: " + greatestIncreaseMonth + " ($" + greatestIncrease + ")")
 
 // The greatest decrease in losses (date and amount) over the entire period.
+//Step 1: Create a variable to store the greatest decrease in losses and the corresponding month
+
+var greatestDecrease = 0;
+var greatestDecreaseMonth = '';
+
+//Step 2: Loop through the elements in the finances array
+//Step 3: Calculate the change in profits from the previous month
+//Step 4: Check if the change in profits is less than the current greatest decrease
+//Step 5: Update the greatest decrease and the relative month
+
+for (var i = 0; i < finances.length; i++) {
+
+  if (i > 0) {
+    var change = finances[i][1] - finances[i-1][1];
+
+    if (change < greatestDecrease) {
+      greatestDecrease = change;
+      greatestDecreaseMonth = finances[i][0];
+
+    }
+  }
+}
+
+//Greatest Decrease in Profits:
+console.log("Greatest Decrease in Profits: " + greatestDecreaseMonth + " ($" + greatestDecrease + ")")
