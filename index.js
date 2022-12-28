@@ -87,22 +87,37 @@ var finances = [
   ["Feb-2017", 671099],
 ];
 
-// Challenge Layout - TO BE DELETED:
-// Financial Analysis
-// ----------------------------
-// Total Months: 25
 // Total: $2561231
 // Average  Change: $-2315.12
 // Greatest Increase in Profits: Feb-2012 ($1926159)
 // Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
-// Required Layout
+// Financial Analysis
+// ----------------------------
 console.log("Financial Analysis \n----------------------------");
 
-// Total number of months included in the dataset
-// Lenght because it sets or returns the number of elements in an array
-var monthCount = finances.length;
-console.log("Total Months: " + monthCount);
+//Total number of months included in the dataset
+//Step 1: Create a variable to store the total number of months
+
+var totalMonths = 0;
+
+//Step 2: Loop through the elements in the finances array
+//Each element in the array is itself an array, with the first element being the month and the second element being the financial data for that month
+//Step 3: Increment the total number of months by 1 for each month in the dataset
+
+for(var i=0; i< finances.length;i++) {
+  var month = finances[i][0];
+  var data = finances[i][1];
+  totalMonths++;
+}
+
+// Total Months:
+console.log("Total Months: " + totalMonths)
+
+// ALTERNATIVE CODE for TOTAL MONTHS // 
+// Use lenght because it sets or returns the number of elements in an array
+// var monthCount = finances.length;
+// console.log("Total Months: " + monthCount);
 
 // The net total amount of Profit/Losses over the entire period.
 // add everything together
