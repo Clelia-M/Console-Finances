@@ -20,5 +20,7 @@ Application that analyzes a given dataset to calculate Profit/Losses.
 5. **The reatest decrease in losses (date and amount) over the entire period:** the code loop through the finances array and calculate the change in profits from one month to the next. Then it compares eache change to the current greatest decrease and update the 'greatestDecrease' and 'greatestdecreaseMonth' variables if the change is less. When the loop finishes, the variables contain the greatest decrease in loss and the relative month. 
 
 ## Link to deployed Application
+[Console Finances Application](https://clelia-m.github.io/Console-Finances/)
 
 ## Final Results
+![Console Finance Last Results](https://github.com/Clelia-M/Console-Finances/blob/7cbde3d1c2648457439020d3ebb77ea17f74b9e9/Console-Finances%20results.png)
