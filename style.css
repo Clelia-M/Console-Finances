@@ -1,0 +1,44 @@
+:root {
+    --primaryclr: #212529;
+    --secondaryclr: #7c99a1;
+    --textligthclr: #d9d5d2;
+    --serif: 'Libre Baskerville', serif;
+    --sans-serif: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--primaryclr);
+    margin-left: 40px;
+}
+
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+h1 {
+    color: var(--secondaryclr);
+    font-family: var(--sans-serif);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--textligthclr);
+    font-family: var(--serif);
+}
+
+p,li {
+    color: var(--textligthclr);
+    font-family: var(--sans-serif);
+}
+
+li {
+    margin: 10px auto;
+}
+
+.results {
+    color: var(--secondaryclr);
+    margin-top: 40px;
+}

@@ -1,5 +1,12 @@
-# Console-Finances
-Application that analyzes the records to calculate Profit/Losses data.
+# 💸 Console-Finances
+
+## Table of Contents
+- [Scope](#scope-of-project)
+- [Workflow](#workflow)
+- [Final result](#final-results)
+
+# Scope of the project
+Application that analyzes a given dataset to calculate Profit/Losses.
 
 # Workflow
 1. **Total number of months included in the dataset:** the code loop through the finances array and increment the 'totalMonths' variable by 1 for each element in the array. When the loop finishes, the 'totalMonths' variable contains the total number of months included in the dataset.
@@ -11,3 +18,7 @@ Application that analyzes the records to calculate Profit/Losses data.
 4. **The greatest increase in profits (date and amount) over the entire period:** the code loop through the finances array and calculate the change in profits from one month to the next. Then it compares eache change to the current greatest increase and update the 'greatestIncrease' and 'greatestIncreaseMonth' variables if the change is grater. When the loop finishes, the variables contain the greatest increase in profits and the relative month. 
 
 5. **The reatest decrease in losses (date and amount) over the entire period:** the code loop through the finances array and calculate the change in profits from one month to the next. Then it compares eache change to the current greatest decrease and update the 'greatestDecrease' and 'greatestdecreaseMonth' variables if the change is less. When the loop finishes, the variables contain the greatest decrease in loss and the relative month. 
+
+## Link to deployed Application
+
+## Final Results
